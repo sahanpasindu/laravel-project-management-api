@@ -1,5 +1,8 @@
 # Laravel Project Management API
 
+![Laravel](https://img.shields.io/badge/framework-Laravel-red)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 A full-featured project management backend built using Laravel 12 and Sanctum authentication.
 
 ## 🚀 Tech Stack
