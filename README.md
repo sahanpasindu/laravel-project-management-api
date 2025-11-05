@@ -3,7 +3,24 @@
 ![Laravel](https://img.shields.io/badge/framework-Laravel-red)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-A full-featured project management backend built using Laravel 12 and Sanctum authentication.
+A fully featured **Project & Task Management REST API** built with **Laravel 12** and **Sanctum** authentication.
+This API demonstrates modern Laravel best practices including versioned routes (`/api/v1`),
+Form Request validation, Resource-driven JSON responses, and a unified custom exception handler for
+clean error output.
+
+Designed as a portfolio-level backend project, it provides a simple foundation to manage projects,
+tasks, and user authentication in a clean, scalable architecture.
+
+## 🔥 Key Highlights
+
+-   Laravel 12 (API Architecture)
+-   Sanctum Authentication (token-based)
+-   Project & Task CRUD Operations
+-   Versioned API (`/api/v1`)
+-   Custom Exception Handling (no HTML errors)
+-   Form Request validation & Resource Transformers
+-   Postman Collection for testing
+-   Git workflow with feature branches and pull requests
 
 ## 🚀 Tech Stack
 
