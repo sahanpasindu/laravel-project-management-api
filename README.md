@@ -36,7 +36,8 @@ POST /api/register
 POST /api/login
 GET /api/me
 
-GET /api/v1/projects
+-   Projects v1/projects
+-   Tasks v1/tasks
 
 ## 🧑💻 Setup
 
@@ -55,7 +56,7 @@ You can test the API quickly using our ready‑made Postman collection.
 
 1. Open Postman → File → Import → Link File or Upload File
 2. Choose this file: [`api-tests/postman_collection.json`](./api-tests/postman_collection.json)
-3. Set the variable `{{base_url}}` to your running Laravel endpoint (`http://127.0.0.1:8000/api/v1`)
+3. Set the variable `{{base_url}}` to your running Laravel endpoint (`http://127.0.0.1:8000/`)
 
 Includes:
 
