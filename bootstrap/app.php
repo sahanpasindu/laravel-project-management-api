@@ -1,5 +1,7 @@
 <?php
 
+use App\Exceptions\ApiExceptionHandler;
+use App\Http\Middleware\ApiAuthenticate;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -13,12 +15,15 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->statefulApi(); // Sanctum handles SPA tokens here
+    
+        $middleware->alias([
+            'auth' => ApiAuthenticate::class,
+        ]);
     })
     // ->withExceptions(function (Exceptions $exceptions): void {
 
     // })
-    ->withExceptions(
-        fn(Exceptions $e) =>
-        (new \App\Exceptions\ApiExceptionHandler)->register($e)
-    )
+    ->withExceptions(function (Exceptions $exceptions) {
+        (new ApiExceptionHandler())->register($exceptions);
+    })
     ->create();
